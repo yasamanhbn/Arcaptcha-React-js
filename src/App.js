@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import WidgetWrapper from './lib/components/widgetWarpper';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  constructor(){
+    super();
+    this.ArRef = React.createRef();
+  }
+  setChallenge = (challengeId)=>{
+    /* setTimeout(()=>{
+      this.ArRef.current.resetCaptcha()
+    },10000) */
+  }
+  render() {
+    return (
+      <div>
+          <WidgetWrapper
+              ref={this.ArRef}
+              invisible={false}
+              site-key="21smftb02t"
+              onsetChallengeId={this.setChallenge}
+              />
+      </div>
+    );
+  }
 }
 
 export default App;
