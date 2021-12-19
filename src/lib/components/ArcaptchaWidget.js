@@ -19,7 +19,7 @@ class ArCaptcha extends Component{
     componentDidMount () { //Once captcha is mounted intialize ArCaptcha
         this.setID()
         const script = document.createElement("script");
-        script.src = `http://localhost:3334/1/api.js`;
+        script.src = `https://widget.arcaptcha.ir/1/api.js`;
         script.onload = () => {
             this.loadCaptcha()
             window.addEventListener(

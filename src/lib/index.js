@@ -1,4 +1,4 @@
-import WidgetWarpper from './components/widgetWarpper';
+import ArcaptchaWidget from './components/ArcaptchaWidget';
 
 
-export {WidgetWarpper}
+export { ArcaptchaWidget }
