@@ -11,14 +11,14 @@ Sign up at [Arcaptcha](https://arcaptcha.ir/sign-up) to get your sitekey today. 
 You can install this library via npm with:
 
 ```
-  npm i arcaptcha-react-js 
+  npm i arcaptcha-react 
 ```
 
 ## Usage
 The requirement for usage are the sitekey prop. The component will automatically include and load the Arcaptcha  API library and append it to the body.
 
 ```
-import {ArcaptchaWidget}  from 'arcaptcha-react-js'
+import {ArcaptchaWidget}  from 'arcaptcha-react'
 
 class YOUR_COMPONENT_NAME extends Component{
   constructor(){
