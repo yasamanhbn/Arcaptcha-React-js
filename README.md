@@ -31,7 +31,7 @@ class YOUR_COMPONENT_NAME extends Component{
   render() {
     return (
       <div>
-          <WidgetWrapper
+          <ArcaptchaWidget
               ref={this.ArRef}
               site-key="YOUR_SITE_KEY"
               onsetChallengeId={this.setChallenge}
