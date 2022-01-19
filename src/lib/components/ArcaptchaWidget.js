@@ -53,6 +53,8 @@ class ArCaptcha extends Component{
             callback: this.props.invisible
                 ? `arcaptcha_callback_${this.state.id}`
                 : null, 
+            lang:this.props.lang,
+            theme:this.props.theme
         })
         this.setState({widget_id:widgetId})
     }

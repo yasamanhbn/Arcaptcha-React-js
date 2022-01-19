@@ -35,6 +35,8 @@ class YOUR_COMPONENT_NAME extends Component{
               ref={this.ArRef}
               site-key="YOUR_SITE_KEY"
               onsetChallengeId={this.setChallenge}
+              theme='dark' //it's not required. Default is light
+              lang='en' //it's not required. Default is fa
               />
       </div>
     );
