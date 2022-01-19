@@ -3,7 +3,7 @@
 ## Description
 Arcaptcha Component Library for ReactJS.
 
-[Arcaptcha](https://arcaptcha.ir/) is a drop-replacement for reCAPTCHA ans hCaptcha that protects user privacy, rewards websites, and helps companies get their data labeled.
+[Arcaptcha](https://arcaptcha.ir/) is a drop-replacement for reCAPTCHA and hCaptcha that protects user privacy, rewards websites, and helps companies get their data labeled.
 
 Sign up at [Arcaptcha](https://arcaptcha.ir/sign-up) to get your sitekey today. You need a **sitekey** to use this library.
 
@@ -51,6 +51,8 @@ class YOUR_COMPONENT_NAME extends Component{
 |    sitekey    |    string   |    Yes   |    -   |    This is your sitekey, this allows you to load captcha. If you need a sitekey, please visit [Arcaptcha](https://arcaptcha.ir/sign-up), and sign up to get your sitekey   |
 |    invisible    |    Boolean    |  NO  |  False | This allows you to use invisible captcha for you forms |
 |    callback    |    Function    |  NO  |  null  | This function would be called in invisible captcha after solving captcha |  
+|    lang    |    string    |  NO  |  fa  | This allows you to choose language by this prop. you can choose 'en' or 'fa' for english and persion language | 
+|    theme    |    string    |  NO  |  light  | This allows you to choose theme for your widget. The themes are light and dark  | 
 
 
 ## Methods
