@@ -51,7 +51,7 @@ class ArCaptcha extends Component {
         const widgetId = window.arcaptcha.render(`#${this.state.id}`, {
             "site-key": this.props['site-key'],
             size: this.props.invisible ? "invisible" : "",
-            callback:  `arcaptcha_callback_${this.state.id}`,
+            callback:`arcaptcha_callback_${this.state.id}`,
             lang: this.props.lang,
             theme: this.props.theme
         })
