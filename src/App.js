@@ -18,7 +18,7 @@ class App extends Component{
       <div>
           <ArcaptchaWidget
               ref={this.ArRef}
-              site-key="0k2m92tx9p"
+              site-key="Yoyr_site_key"
               onsetChallengeId={this.setChallenge}
               callback={this.getToken}
               theme='dark' //it's not required. Default is light
