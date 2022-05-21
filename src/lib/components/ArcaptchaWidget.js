@@ -20,6 +20,7 @@ class ArCaptcha extends Component {
         this.setID()
         const script = document.createElement("script");
         script.src = `https://widget.arcaptcha.ir/1/api.js`;
+        script.id = "arcptcha-script"
         script.onload = () => {
             this.loadCaptcha()
             window.addEventListener(
@@ -29,7 +30,13 @@ class ArCaptcha extends Component {
                 }
             );
         }
-        document.body.appendChild(script);
+        if(document.head.querySelector("script")){
+            var check = document.head.querySelector("script").id === "arcptcha-script"
+            if(check === undefined)
+                document.head.appendChild(script);
+        }
+        else
+            document.head.appendChild(script);
     }
 
     getRandomID() {
