@@ -30,12 +30,7 @@ class ArCaptcha extends Component {
                 }
             );
         }
-        if(document.head.querySelector("script")){
-            var check = document.head.querySelector("script").id === "arcptcha-script"
-            if(check === undefined)
-                document.head.appendChild(script);
-        }
-        else
+        if(!document.head.querySelector("#arcptcha-script"))
             document.head.appendChild(script);
     }
 
