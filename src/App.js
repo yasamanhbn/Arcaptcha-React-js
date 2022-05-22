@@ -16,24 +16,7 @@ class App extends Component {
       <div>
         <ArcaptchaWidget
           ref={this.ArRef}
-          site-key="0k2m92tx9p"
-          onsetChallengeId={this.setChallenge}
-          callback={this.getToken}
-          theme="dark" //it's not required. Default is light
-          lang="en" //it's not required. Default is fa
-        />
-        <div>lfnoruaeg</div>
-        <ArcaptchaWidget
-          ref={this.ArRef}
-          site-key="89oep0u80t"
-          onsetChallengeId={this.setChallenge}
-          callback={this.getToken}
-          theme="dark" //it's not required. Default is light
-          lang="en" //it's not required. Default is fa
-        />
-        <ArcaptchaWidget
-          ref={this.ArRef}
-          site-key="0k2m92tx9p"
+          site-key=""
           onsetChallengeId={this.setChallenge}
           callback={this.getToken}
           theme="dark" //it's not required. Default is light

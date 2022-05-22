@@ -23,21 +23,28 @@ class ArCaptcha extends Component {
     let script = my_script || document.createElement("script");
     script.src = `https://widget.arcaptcha.ir/1/api.js`;
     script.id = "arcptcha-script";
-    this.initialize(script);
-    if (!my_script)
-      document.head.appendChild(script);
+    if (my_script) {
+      setTimeout(()=>{
+        this.initialize();
+      },300)
+      
+    }
+    else {
+      script.onload = () => {
+        this.initialize();
+      };
+    }
+    if (!my_script) document.head.appendChild(script);
   }
 
-  initialize(script) {
-    script.onload = () => {
-      this.loadCaptcha();
-      window.addEventListener(
-        `arcaptcha-token-changed-${this.state.widget_id}`,
-        (event, v) => {
-          this.props.onsetChallengeId(event.detail);
-        }
-      );
-    };
+  initialize() {
+    this.loadCaptcha();
+    window.addEventListener(
+      `arcaptcha-token-changed-${this.state.widget_id}`,
+      (event, v) => {
+        this.props.onsetChallengeId(event.detail);
+      }
+    );
   }
   getRandomID() {
     return (
@@ -53,6 +60,7 @@ class ArCaptcha extends Component {
     if (this.props.callback)
       window[`arcaptcha_callback_${this.state.id}`] = this.props.callback;
 
+    console.log(window.arcaptcha)
     const widgetId = window.arcaptcha.render(`#${this.state.id}`, {
       "site-key": this.props["site-key"],
       size: this.props.invisible ? "invisible" : "",
