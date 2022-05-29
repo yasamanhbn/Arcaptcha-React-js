@@ -25,8 +25,8 @@ class YOUR_COMPONENT_NAME extends Component{
     super();
     this.ArRef = React.createRef();
   }
-  setChallenge = (challengeId)=>{
-    //do something with your challenge ID.
+  getToken = (token)=>{
+    //do something with your token.
   }
   render() {
     return (
@@ -34,7 +34,7 @@ class YOUR_COMPONENT_NAME extends Component{
           <ArcaptchaWidget
               ref={this.ArRef}
               site-key="YOUR_SITE_KEY"
-              callback={this.setChallenge}
+              callback={this.getToken}
               theme='dark' //it's not required. Default is light
               lang='en' //it's not required. Default is fa
               />
