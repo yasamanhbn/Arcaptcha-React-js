@@ -21,20 +21,24 @@ class ArCaptcha extends Component {
     this.setID();
     var my_script = document.head.querySelector("#arcptcha-script");
     let script = my_script || document.createElement("script");
-    script.src = `https://widget.arcaptcha.ir/1/api.js`;
-    script.id = "arcptcha-script";
+    if (!my_script) {
+      window.arcaptchaWidgetLoading = new Promise((resolve, reject) => {
+        script.src = `https://widget.arcaptcha.ir/1/api.js`;
+        script.id = "arcptcha-script";
+        script.onload = () => {
+          resolve();
+          this.initialize();
+        };
+      });
+    }
     if (my_script) {
-      setTimeout(()=>{
+      window.arcaptchaWidgetLoading.then(() => {
         this.initialize();
-      },300)
-      
+      });
     }
-    else {
-      script.onload = () => {
-        this.initialize();
-      };
+    if (!my_script) {
+      document.head.appendChild(script);
     }
-    if (!my_script) document.head.appendChild(script);
   }
 
   initialize() {
@@ -42,7 +46,7 @@ class ArCaptcha extends Component {
     window.addEventListener(
       `arcaptcha-token-changed-${this.state.widget_id}`,
       (event, v) => {
-        this.props.onsetChallengeId(event.detail);
+        /* this.props.onsetChallengeId(event.detail); */
       }
     );
   }
@@ -59,8 +63,6 @@ class ArCaptcha extends Component {
   loadCaptcha() {
     if (this.props.callback)
       window[`arcaptcha_callback_${this.state.id}`] = this.props.callback;
-
-    console.log(window.arcaptcha)
     const widgetId = window.arcaptcha.render(`#${this.state.id}`, {
       "site-key": this.props["site-key"],
       size: this.props.invisible ? "invisible" : "",
