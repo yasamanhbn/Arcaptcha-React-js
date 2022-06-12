@@ -23,7 +23,7 @@ class ArCaptcha extends Component {
     let script = my_script || document.createElement("script");
     if (!my_script) {
       window.arcaptchaWidgetLoading = new Promise((resolve, reject) => {
-        script.src = `https://widget.arcaptcha.ir/1/api.js`;
+        script.src = `https://widget.arcaptcha.co/1/api.js`;
         script.id = "arcptcha-script";
         script.onload = () => {
           resolve();
