@@ -48,7 +48,7 @@ class YOUR_COMPONENT_NAME extends Component{
 
 | Name | Values/Type | Required	| Default	 | Description |
 |--------|--------|--------|--------|--------|
-|    sitekey    |    string   |    Yes   |    -   |    This is your sitekey, this allows you to load captcha. If you need a sitekey, please visit [Arcaptcha](https://arcaptcha.ir/sign-up), and sign up to get your sitekey   |
+|    site-key    |    string   |    Yes   |    -   |    This is your sitekey, this allows you to load captcha. If you need a sitekey, please visit [Arcaptcha](https://arcaptcha.ir/sign-up), and sign up to get your sitekey   |
 |    invisible    |    Boolean    |  NO  |  False | This allows you to use invisible captcha for you forms |
 |    callback    |    Function    |  NO  |  null  | This function would be called in invisible captcha after solving captcha |  
 |    lang    |    string    |  NO  |  fa  | This allows you to choose language by this prop. you can choose 'en' or 'fa' for english and persion language | 
