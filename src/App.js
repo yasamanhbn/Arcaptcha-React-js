@@ -17,20 +17,13 @@ class App extends Component {
       <div>
         <ArcaptchaWidget
           ref={this.ArRef}
-          site-key="4pmvo77wq2"
-          /* onsetChallengeId={this.setChallenge} */
+          site-key=""
           callback={this.getToken}
           theme="dark" //it's not required. Default is light
           lang="en" //it's not required. Default is fa
+          color="pink"
         />
-        <ArcaptchaWidget
-          ref={this.ArRef}
-          site-key="h8a32dwwky"
-          //onsetChallengeId={this.setChallenge}
-          callback={this.getToken}
-          theme="dark" //it's not required. Default is light
-          lang="en" //it's not required. Default is fa
-        />
+
       </div>
     );
   }

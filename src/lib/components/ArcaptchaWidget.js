@@ -71,6 +71,7 @@ class ArCaptcha extends Component {
         : null,
       lang: this.props.lang,
       theme: this.props.theme,
+      color:this.props.color
     });
     this.setState({ widget_id: widgetId });
   }

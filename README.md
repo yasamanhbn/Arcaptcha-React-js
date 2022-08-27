@@ -53,11 +53,12 @@ class YOUR_COMPONENT_NAME extends Component{
 |    callback    |    Function    |  NO  |  null  | This function would be called in invisible captcha after solving captcha |  
 |    lang    |    string    |  NO  |  fa  | This allows you to choose language by this prop. you can choose 'en' or 'fa' for english and persion language | 
 |    theme    |    string    |  NO  |  light  | This allows you to choose theme for your widget. The themes are light and dark  | 
+| `color`     | String      | No       | `normal` | Color of every colored element in widget and challenge.         
 
 
 ## Methods
 
 | Method | Description |
 |--------|--------|
-|    execute    |    Programmatically trigger a challenge request. You can use this, to load invisible captcha after trigger a button  |
-|    resetCaptcha    |    	Reset the current challenge    |
+|    execute()    |    Programmatically trigger a challenge request. You can use this, to load invisible captcha after trigger a button  |
+|    resetCaptcha()    |    	Reset the current challenge    |
